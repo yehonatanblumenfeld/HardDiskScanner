@@ -1,0 +1,1 @@
+connection_string = "mongodb+srv://yoni:1234@cluster0.zjedq.mongodb.net/FileAnalayzer?retryWrites=true&w=majority"
