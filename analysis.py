@@ -9,11 +9,13 @@ import logger
 
 # This function get the path and the name of the file and extract the values needed
 def analyze_file(path: str, file_name: str, customer_id):
+
     try:
         file_data = os.stat(path)
 
         # extracting file extension
         file_extension = "." + file_name.split(".", 1)[1]
+
         # extracting file isHidden
         attribute = win32api.GetFileAttributes(path)
         hidden = attribute & (win32con.FILE_ATTRIBUTE_HIDDEN | win32con.FILE_ATTRIBUTE_SYSTEM)
@@ -36,7 +38,7 @@ def analyze_file(path: str, file_name: str, customer_id):
                 "is_hidden": is_file_hidden,
                 "creation_time": file_creation_time,
                 "sha256": file_sha256}
-
+        write_to_console(file_name)
         return file_attributes
 
     except:

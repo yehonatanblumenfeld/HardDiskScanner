@@ -1,1 +1,1 @@
-connection_string = "mongodb+srv://username:password@cluster0.zjedq.mongodb.net/databaseName?retryWrites=true&w=majority"
+connection_string = "mongodb+srv://yoni:1234@cluster0.zjedq.mongodb.net/FileAnalayzer?retryWrites=true&w=majority"

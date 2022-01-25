@@ -2,6 +2,7 @@ import os
 from printer import write_to_console
 from analysis import analyze_file
 from data_layer import add_file
+
 import logger
 files = []
 
