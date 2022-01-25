@@ -11,7 +11,7 @@ def main():
     with ThreadPoolExecutor(max_workers=2) as executor:
         my_params = executor.submit(config_params).result()
 
-    scan_hard_disk(my_params["hardDisk"],my_params["fileExtension"],  my_params["customerId"])
+    scan_hard_disk(my_params["hardDisk"], my_params["fileExtension"],  my_params["customerId"])
     write_file_list_to_console(get_hidden_files())
     logger.log_message("scanning completed")
 

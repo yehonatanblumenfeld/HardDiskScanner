@@ -17,7 +17,7 @@ def config_params():
         parameters = {"fileExtension": ".exe", "hardDisk": "F", "customerId": "1234"}
 
         # creating a new config file and writing the necessary data into it
-        config_file = open("config.json", "x")
+        config_file = open("config.json", "a")
         config_file.write(json.dumps(parameters))
         config_file.close()
         params = parameters
